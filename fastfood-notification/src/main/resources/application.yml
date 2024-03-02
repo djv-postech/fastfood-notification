@@ -1,0 +1,36 @@
+server:
+  port: 8084
+
+spring:
+
+  application:
+    name: fastfood-notification
+
+  mail:
+    host: live.smtp.mailtrap.io
+    port: 587
+    username: api
+    password: 2172c6459e1f4c75a49418c9f2762ae0
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+  rabbitmq:
+    host: ${RABBIT_HOST:localhost}
+    port: 5672
+    username: ${RABBIT_USERNAME:guest}
+    password: ${RABBIT_PASSWORD:guest}
+
+    listener:
+      simple:
+        retry:
+          enabled: true
+          max-attempts: 3
+          initial-interval: 5000
+          multiplier: 2
+          max-interval: 300000
+
+
