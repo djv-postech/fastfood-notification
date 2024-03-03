@@ -1,4 +1,4 @@
-package com.fiap.postech.techchallenge.fastfoodnotification.domain.usecases.notificacao;
+package com.fiap.postech.techchallenge.fastfoodnotification.infra.smtp;
 
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
