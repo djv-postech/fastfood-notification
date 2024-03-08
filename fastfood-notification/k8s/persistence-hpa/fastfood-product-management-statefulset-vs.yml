@@ -1,0 +1,17 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: fastfood-product-management-sql-virtual-service
+spec:
+  hosts:
+    - fastfood-product-management-mysql-service
+  http:
+    - route:
+        - destination:
+            host: fastfood-product-management-mysql-service
+      corsPolicy:
+        allowOrigins:
+          - exact: "*"
+        allowMethods:
+          - POST
+          - GET

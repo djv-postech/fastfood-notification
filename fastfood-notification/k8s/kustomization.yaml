@@ -1,0 +1,5 @@
+resources:
+  - fastfood-notification-secrets.yml
+  - fastfood-notification-svc.yml
+  - fastfood-notification-deployment.yml
+

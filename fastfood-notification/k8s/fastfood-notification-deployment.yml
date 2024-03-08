@@ -1,0 +1,56 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fastfood-notification-deployment
+  labels:
+    app: fastfood-notification
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name: fastfood-notification
+      labels:
+        app: fastfood-notification
+      annotations:
+        sidecar.istio.io/inject: "false"
+    spec:
+      containers:
+        - name: fastfood-notification-container
+          image: soatpostech/fastfood-notification:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8084
+          env:
+            - name: MAILTRAP_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: fastfood-notification-secret-opaque
+                  key: MAILTRAP_USERNAME
+
+            - name: MAILTRAP_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: fastfood-notification-secret-opaque
+                  key: MAILTRAP_PASSWORD
+
+            - name: RABBIT_HOST
+              valueFrom:
+                secretKeyRef:
+                  name: fastfood-notification-secret-opaque
+                  key: RABBIT_HOST
+
+            - name: RABBIT_HOST
+              valueFrom:
+                secretKeyRef:
+                  name: fastfood-notification-secret-opaque
+                  key: RABBIT_HOST
+
+            - name: RABBIT_PASSWORD
+                valueFrom:
+                  secretKeyRef:
+                    name: fastfood-notification-secret-opaque
+                    key: RABBIT_PASSOWORD
+
+  selector:
+    matchLabels:
+      app: fastfood-notification

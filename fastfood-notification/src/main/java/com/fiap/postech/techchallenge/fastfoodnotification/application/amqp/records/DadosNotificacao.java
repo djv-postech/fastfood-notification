@@ -8,9 +8,19 @@ public class DadosNotificacao {
     private String email;
     private String texto;
 
+    public DadosNotificacao(String nome, String email, String texto) {
+        this.nome = nome;
+        this.email = email;
+        this.texto = texto;
+    }
+
 
     public Notificacao toNotificacao() {
         return new Notificacao(nome, email, texto);
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getNome() {

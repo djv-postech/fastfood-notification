@@ -9,8 +9,8 @@ spring:
   mail:
     host: live.smtp.mailtrap.io
     port: 587
-    username: api
-    password: 2172c6459e1f4c75a49418c9f2762ae0
+    username: ${MAILTRAP_USERNAME:api}
+    password: ${MAILTRAP_PASSWORD:2172c6459e1f4c75a49418c9f2762ae0}
     properties:
       mail:
         smtp:
