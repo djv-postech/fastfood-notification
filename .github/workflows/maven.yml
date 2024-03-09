@@ -69,7 +69,7 @@ jobs:
   Build:
     name: Build App
     runs-on: ubuntu-latest
-    #needs: Sonar-Analisys
+    needs: Unit-Tests
     
     steps:
     - uses: actions/checkout@v3
