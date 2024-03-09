@@ -39,17 +39,17 @@ spec:
                   name: fastfood-notification-secret-opaque
                   key: RABBIT_HOST
 
-            - name: RABBIT_HOST
+            - name: RABBIT_USERNAME
               valueFrom:
                 secretKeyRef:
                   name: fastfood-notification-secret-opaque
-                  key: RABBIT_HOST
+                  key: RABBIT_USERNAME
 
             - name: RABBIT_PASSWORD
-                valueFrom:
-                  secretKeyRef:
-                    name: fastfood-notification-secret-opaque
-                    key: RABBIT_PASSOWORD
+              valueFrom:
+                secretKeyRef:
+                  name: fastfood-notification-secret-opaque
+                  key: RABBIT_PASSOWORD
 
   selector:
     matchLabels:
