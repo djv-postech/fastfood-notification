@@ -68,6 +68,13 @@
 						<goals>
 							<goal>report</goal>
 						</goals>
+						<configuration>
+							<excludes>
+								<exclude>com/fiap/postech/techchallenge/fastfoodnotification/infra/config/amqp/**</exclude>
+								<exclude>com/fiap/postech/techchallenge/fastfoodnotification/application/config/**</exclude>
+								<exclude>com/fiap/postech/techchallenge/fastfoodnotification/FastfoodNotificationApplication.class</exclude>
+							</excludes>
+						</configuration>
 					</execution>
 					<execution>
 					<id>jacoco-report</id>
@@ -92,9 +99,9 @@
 								<rule>
 									<element>CLASS</element>
 									<excludes>
+										<exclude>com.fiap.postech.techchallenge.fastfoodnotification.infra.config.amqp.**</exclude>
+										<exclude>com.fiap.postech.techchallenge.fastfoodnotification.application.config.**</exclude>
 										<exclude>**.*Application</exclude>
-										<exclude>**.*Configuration</exclude>
-										<exclude>**.*Error</exclude>
 									</excludes>
 									<limits>
 										<limit>
