@@ -12,7 +12,7 @@ import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 @ExtendWith(MockitoExtension.class)
-class NotificacaoEmailTest {
+public class NotificacaoEmailTest {
 
     @Mock
     private EmailService emailService;

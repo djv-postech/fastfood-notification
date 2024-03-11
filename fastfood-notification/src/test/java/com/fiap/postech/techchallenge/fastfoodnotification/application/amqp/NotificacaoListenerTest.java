@@ -17,7 +17,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(MockitoExtension.class)
-class NotificacaoListenerTest {
+public class NotificacaoListenerTest {
 
     @Mock
     private NotificacaoConfiguration notificacaoConfiguration;

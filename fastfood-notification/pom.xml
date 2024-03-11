@@ -63,12 +63,18 @@
 						</goals>
 					</execution>
 					<execution>
-						<id>report</id>
-						<phase>prepare-package</phase>
-						<goals>
-							<goal>report</goal>
-						</goals>
-					</execution>
+					<id>jacoco-report</id>
+					<goals>
+						<goal>report</goal>
+					</goals>
+					<configuration>
+						<excludes>
+							<exclude>com/fiap/postech/techchallenge/fastfoodnotification/infra/config/amqp/**</exclude>
+							<exclude>com/fiap/postech/techchallenge/fastfoodnotification/application/config/**</exclude>
+							<exclude>com/fiap/postech/techchallenge/fastfoodnotification/FastfoodNotificationApplication.class</exclude>
+						</excludes>
+					</configuration>
+				</execution>
 					<execution>
 						<id>jacoco-check</id>
 						<goals>
@@ -82,7 +88,6 @@
 										<exclude>**.*Application</exclude>
 										<exclude>**.*Configuration</exclude>
 										<exclude>**.*Error</exclude>
-										<exclude>**.*Handler</exclude>
 									</excludes>
 									<limits>
 										<limit>

@@ -23,14 +23,6 @@ public class DadosNotificacao {
         this.email = email;
     }
 
-    public String getNome() {
-        return nome;
-    }
-
-    public String getTexto() {
-        return texto;
-    }
-
     public String getEmail() {
         return email;
     }

@@ -9,7 +9,7 @@ import java.io.PrintStream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class NotificacaoMonitorTest {
+public class NotificacaoMonitorTest {
 
     private final NotificacaoMonitor notificacaoMonitor = new NotificacaoMonitor();
 
