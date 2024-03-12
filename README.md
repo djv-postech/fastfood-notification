@@ -8,7 +8,7 @@ Envios de notificações (e-mails) para o cliente referente a alteração de sta
 
 #### **Fluxo Criação Pedido**
 
-![Fluxo envio de notificacoes](imagens/fluxo-envio-de-notificacoes.png)
+![Fluxo envio de notificacoes](fastfood-notification/imagens/fluxo-envio-de-notificacoes.png)
 
 <br>
 
