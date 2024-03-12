@@ -1,7 +1,10 @@
 # fastfood-notification
 Serviço responsável pelas notificações do fastfood
-Envios de notificações (e-mails) para o cliente referente a alteração de status de pagamento.
-Envios de notificações (e-mails) para o cliente referente a alteração de status de pedido.
+<br>
+<br>
+* Envios de notificações (e-mails) para o cliente referente a alteração de status de pagamento.
+<br>
+* Envios de notificações (e-mails) para o cliente referente a alteração de status de pedido.
 
 <br>
 <br>
