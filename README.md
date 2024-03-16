@@ -28,4 +28,3 @@ Serviço responsável pelas notificações do fastfood
 ***
 * Jackson Carlos Leite Ramalho
 * Valqueline Nicácio da Silva
-
